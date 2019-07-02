@@ -7,3 +7,6 @@
 - run:
 `python3 main.py`
 
+- Can this be deployed in AWS or Heroku? so that others can get data from local database.
+- Will try later
+
