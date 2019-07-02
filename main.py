@@ -10,19 +10,26 @@ logger = logging.getLogger(__name__)
 
 
 # @app.route('/add', methods=['POST'])
-# def add_user():
+# def add_goods():
 # 	try:
 # 		_json = request.json
-# 		_name = _json['name']
-# 		_email = _json['email']
-# 		_password = _json['pwd']
+# 		_goods_title = _json['goods_title']
+# 		_goods_title_ch = _json['goods_title_ch']
+# 		_goods_category = _json['goods_category']
+#         _goods_id = _json['goods_id']
+# 		_goods_saleprice = _json['goods_saleprice']
+# 		_goods_oriprice = _json['goods_oriprice']
+#         _discount_perc = _json['discount_perc']
+# 		_ends_time = _json['ends_time']
+		
 # 		# validate the received values
-# 		if _name and _email and _password and request.method == 'POST':
+# 		if _goods_category and _goods_title and request.method == 'POST':
 # 			#do not save password as a plain text
-# 			_hashed_password = generate_password_hash(_password)
+# 			# _hashed_password = generate_password_hash(_password)
 # 			# save edits
-# 			sql = "INSERT INTO tbl_user(user_name, user_email, user_password) VALUES(%s, %s, %s)"
-# 			data = (_name, _email, _hashed_password,)
+# 			sql = "INSERT IGNORE INTO amazontodaydeal (goods_id, goods_title, goods_title_ch, goods_category, goods_saleprice, goods_oriprice,\
+#             discount_perc, ends_time) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
+# 			data = (_goods_id, _goods_title, _goods_title_ch, _goods_category, _goods_saleprice, _goods_oriprice, _discount_perc, _ends_time)
 # 			conn = mysql.connect()
 # 			cursor = conn.cursor()
 # 			cursor.execute(sql, data)
